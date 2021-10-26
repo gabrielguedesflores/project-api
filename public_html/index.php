@@ -25,8 +25,8 @@ if(isset($_GET['url'])){
             http_response_code(404);
             
             echo json_encode(array(
-                'Status' => 'error',
-                'Data'    => $e->getMessage(),
+                'status' => 'error',
+                'data'    => $e->getMessage(),
             ), JSON_UNESCAPED_UNICODE);
             exit;
         }
